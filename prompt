@@ -41,6 +41,7 @@ print_usage()
 	echo "  options:"
 	echo "    -p            Set the prompt in the popup menu."
 	echo "    -c            Set the command that will be run."
+	echo "    -y            Change the options to 'Yes & No'."
 	echo "    -o            Change the options to 'On & Off'."
 	echo "    -t            Change the options to 'True & False'."
 	echo "    -r            Reverse the order of the options."
@@ -60,6 +61,11 @@ while getopts ":p:c:otrh" flag; do
 		c | --command)
 			cmd=${OPTARG}
 			option_command=1
+		;;
+
+		y | --yes-no)
+			option_positive="Yes"
+			option_negative="No"
 		;;
 
 		o | --on-off)
