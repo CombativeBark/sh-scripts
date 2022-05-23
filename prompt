@@ -51,7 +51,7 @@ print_usage()
 	exit 0;
 }
 
-while getopts ":p:c:otrh" flag; do
+while getopts ":p:c:yotrh" flag; do
 	case ${flag} in
 		# Leaving long flags incase I feel like adding it later.
 		p | --prompt)
